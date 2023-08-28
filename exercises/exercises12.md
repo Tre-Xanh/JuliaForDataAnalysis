@@ -22,7 +22,7 @@ using Downloads
 using SHA
 Downloads.download("https://go.dev/dl/go1.19.2.src.tar.gz", "go.tar.gz")
 shavec = open(sha256, "go.tar.gz")
-shastr = join(string.(s; base=16, pad=2))
+shastr = join(string.(shavec; base=16, pad=2))
 sha == shastr
 ```
 
@@ -90,7 +90,7 @@ in `target_df`.
 This is short, but you need to have a good understanding of Julia types
 and standar functions to properly write it:
 ```
-Symbol.(target_df.id) == keys(edges_json)
+Symbol.(target_df.id) == collect(keys(edges_json))
 ```
 
 </details>
@@ -115,7 +115,7 @@ function edgelist2graph(edgelist)
     end
     return g
 end
-target_df.egonet = edgelist2graph(values(edges_json))
+target_df.egonet = edgelist2graph.(values(edges_json))
 ```
 
 </details>

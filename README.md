@@ -2,10 +2,23 @@
 
 This repository contains source codes for the
 ["Julia for Data Analysis"](https://www.manning.com/books/julia-for-data-analysis?utm_source=bkamins&utm_medium=affiliate&utm_campaign=book_kaminski2_julia_3_17_22)
-book that is written by Bogumił Kamiński and is planned to be published in 2022
-by [Manning Publications Co.](https://www.manning.com/)
+book that has been written by Bogumił Kamiński and has been published by [Manning Publications Co.](https://www.manning.com/)
 
-Extras:
+## Contents
+
+* [Additional teaching materials](#additional-teaching-materials)
+* [Setting up your environment](#setting-up-your-environment)
+  * [General instructions](#general-instructions)
+  * [Note for Linux users](#note-for-linux-users)
+  * [Dev Containers](#dev-containers)
+* [Organization of the code](#organization-of-the-code)
+* [Running the example codes](#running-the-example-codes)
+* [Accompanying materials](#accompanying-materials)
+* [Data used in the book](#data-used-in-the-book)
+* [Citation](#citation)
+* [Errata](#errata)
+
+## Additional teaching materials
 * in the `/exercises` folder for each book chapter you can find 10 additional
   exercises with solutions (they are meant for self study and are not discussed
   in the book)
@@ -15,6 +28,8 @@ Extras:
   to accommodate it for running in Jupyter Notebook).
 
 ## Setting up your environment
+
+### General instructions
 
 In order to prepare the Julia environment before working with the materials
 presented in the book please perform the following setup steps:
@@ -37,7 +52,7 @@ presented in the book please perform the following setup steps:
   given in appendix A to the book);
 * press <kbd>]</kbd>, write `instantiate` and press <kbd>Enter</kbd> (this
   process will ensure that Julia properly configures the working environment
-  for working with the codes from the book); in some cases 
+  for working with the codes from the book); in some cases
   running the `resolve` command also might be required;
 * press <kbd>Backspace</kbd>, write `exit()` and press <kbd>Enter</kbd>;
   now you should exit Julia and everything is set up to work with the materials
@@ -76,6 +91,17 @@ export PATH="$PATH:/opt/julia-1.7.2/bin"
 ```
 
 line (assuming you have downloaded Julia 1.7.2 and extracted it to `/opt` folder).
+
+### Dev Containers
+
+Folder `/.devcontainer` contains configuration files for
+[Dev Containers](https://containers.dev).
+
+* For use with Github Codespaces, please follow the instruction at
+  [Creating a codespace for a repository](https://docs.github.com/en/codespaces/developing-in-codespaces/creating-a-codespace-for-a-repository#creating-a-codespace-for-a-repository).
+* For local/'remote host' usage with Visual Studio Code, please follow the
+  instructions at
+  [Developing inside a Container](https://code.visualstudio.com/docs/devcontainers/containers).
 
 ## Organization of the code
 
@@ -140,3 +166,25 @@ They are respectively:
   <https://snap.stanford.edu/data/github-social.html> under GPL-3.0 License)
 * owensboro.zip (for chapter 13, available at The Stanford Open Policing Project
   under the Open Data Commons Attribution License)
+
+## Citation
+
+#### Plain text (Chicago style):
+
+Kamiński, Bogumił. 2023. *Julia for Data Analysis*. Manning.
+
+#### BibTeX:
+
+```
+@book{Kaminski2023,
+  title     = "Julia for Data Analysis",
+  author    = "Kamiński, Bogumił",
+  year      = 2023,
+  publisher = "Manning",
+  address   = "Shelter Island, NY"
+}
+```
+
+## Errata
+
+You can find errata for the book in [this file](errata.md).
